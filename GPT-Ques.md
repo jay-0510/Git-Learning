@@ -10,7 +10,7 @@ Feature branch is behind main. Need latest changes, clean history, avoid merge c
 
 ### ✅ Answer
 
-bash git checkout feature/payment git fetch origin git rebase origin/main
+bash git checkout feature/payment </br> git fetch origin</br> git rebase origin/main
 
 ### 💡 Explanation
 
@@ -32,7 +32,7 @@ Conflict occurs during rebase.
 
 ### ✅ Answer
 
-bash git status # fix conflicts manually git add <file> git rebase --continue # optional git rebase --abort
+bash git status </br># fix conflicts manually git add <file></br> git rebase --continue </br># optional git rebase --abort
 
 ### 💡 Explanation
 
@@ -54,7 +54,7 @@ Push rejected after rebase.
 
 ### ✅ Answer
 
-bash git push --force-with-lease
+bash git push --force-with-lease </br>
 
 ### 💡 Explanation
 
@@ -63,7 +63,7 @@ bash git push --force-with-lease
 
 ### ⚠️ Avoid
 
-bash git push --force
+bash git push --force </br>
 
 - Overwrites blindly (dangerous)
 
@@ -77,7 +77,7 @@ Accidentally ran git reset --hard HEAD~3
 
 ### ✅ Answer
 
-bash git reflog git reset --hard <commit_hash>
+bash git reflog </br> git reset --hard <commit_hash>
 
 ### 💡 Explanation
 
@@ -94,7 +94,7 @@ API key committed and pushed
 
 ### ✅ Answer
 
-bash git filter-repo --path <file> --invert-paths git push --force --all
+bash git filter-repo --path <file> --invert-paths </br> git push --force --all
 
 ### 💡 Explanation
 
@@ -116,7 +116,7 @@ Working with main, develop, and feature branches
 
 ### ✅ Answer
 
-bash git checkout develop git pull origin develop git checkout -b feature/login git fetch origin git rebase origin/develop git push origin feature/login git checkout develop git merge feature/login git push origin develop
+bash git checkout develop </br> git pull origin develop </br>git checkout -b feature/login </br> git fetch origin </br>git rebase origin/develop </br> git push origin feature/login </br> git checkout develop </br> git merge feature/login </br>git push origin develop
 
 ### 💡 Explanation
 
@@ -134,7 +134,7 @@ Wrong file added + wrong commit message
 
 ### ✅ Answer
 
-bash git rm --cached <file> git commit --amend
+bash git rm --cached <file> </br> git commit --amend
 
 ### 💡 Explanation
 
@@ -151,7 +151,7 @@ Need to switch branch without committing
 
 ### ✅ Answer
 
-bash git stash push -m "WIP" git checkout other-branch # later git checkout feature-branch git stash pop
+bash git stash push -m "WIP" </br> git checkout other-branch </br># later git checkout feature-branch </br> git stash pop
 
 ### 💡 Explanation
 
@@ -168,7 +168,7 @@ Deleted branch accidentally
 
 ### ✅ Answer
 
-bash git reflog git checkout -b feature/cart <commit_hash>
+bash git reflog </br> git checkout -b feature/cart <commit_hash>
 
 ### 💡 Explanation
 
@@ -239,7 +239,7 @@ bash git rebase branch
 
 ### ✅ Answer
 
-bash git diff # unstaged (working dir vs index) git diff --staged # staged (index vs HEAD) git diff main..feature # branch comparison
+bash git diff # unstaged (working dir vs index) </br> git diff --staged # staged (index vs HEAD) </br> git diff main..feature # branch comparison
 
 ### 💡 Explanation
 
@@ -259,7 +259,7 @@ Find processPayment in .py files with line numbers
 
 ### ✅ Answer
 
-bash git grep -n "processPayment" -- "\*.py"
+bash git grep -n "processPayment" -- "\*.py" </br>
 
 ### 💡 Explanation
 
@@ -277,7 +277,7 @@ Apply commit abc123 from another branch
 
 ### ✅ Answer
 
-bash git checkout feature/cart git cherry-pick abc123
+bash git checkout feature/cart </br> git cherry-pick abc123
 
 ### 💡 Explanation
 
@@ -286,7 +286,7 @@ bash git checkout feature/cart git cherry-pick abc123
 
 ### ⚠️ Conflict Handling
 
-bash git add <file> git cherry-pick --continue # or git cherry-pick --abort
+bash git add <file> </br> git cherry-pick --continue # </br> or git cherry-pick --abort
 
 ---
 
@@ -298,7 +298,7 @@ Convert 5 commits into 1 clean commit
 
 ### ✅ Answer
 
-bash git rebase -i HEAD~5
+bash git rebase -i HEAD~5 </br>
 
 Then:
 pick commit1 squash commit2 squash commit3 squash commit4 squash commit5
@@ -327,7 +327,7 @@ bash git push --force-with-lease
 
 ### 👥 Teammate Fix
 
-bash git fetch git reset --hard origin/branch
+bash git fetch </br> git reset --hard origin/branch
 
 ### 💡 Explanation
 
@@ -344,7 +344,7 @@ PR has messy merge commits
 
 ### ✅ Answer
 
-bash git checkout feature-branch git fetch origin git rebase origin/main git rebase -i origin/main git push --force-with-lease
+bash git checkout feature-branch </br> git fetch origin </br> git rebase origin/main </br> git rebase -i origin/main </br> git push --force-with-lease
 
 ### 💡 Explanation
 
